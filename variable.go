@@ -14,7 +14,7 @@ func main() {
 
 	var (
 		firstName = "Johny Deep"
-		lastName  = "Deep"
+		lastName  = "Deep Jhony"
 	)
 
 	fmt.Println(firstName, lastName)
