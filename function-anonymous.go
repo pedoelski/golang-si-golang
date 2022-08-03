@@ -4,14 +4,21 @@ import "fmt"
 
 type Blacklist func(string) bool
 
-func registerUser(name string, ) {
-
+func registerUser(name string, blacklist Blacklist) {
+	if blacklist(name) {
+		fmt.Println("Your are blocked")
+	} else {
+		fmt.Println("Welcome")
+	}
 }
 
 func main() {
-	fun := func() string {
-		return "hello World"
+	fun := func(name string) bool {
+		return name == "dog"
 	}
 
-	fmt.Println(fun)
+	registerUser("Jon Doe", fun)
+	registerUser("dog", func(name string) bool {
+		return name == "dog"
+	})
 }
