@@ -5,6 +5,15 @@ import "fmt"
 func main() {
 	value := 100
 
+	switch {
+	case value < 50:
+		fmt.Println("You Win")
+	case value > 50:
+		fmt.Println("You Lose")
+	default:
+		fmt.Println("Default")
+	}
+
 	switch value {
 	case 50:
 		fmt.Println("Value 50")
